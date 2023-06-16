@@ -21,7 +21,7 @@ def songs_list(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def product_detail(request, pk):
+def song_detail(request, pk):
     
     song = get_object_or_404(Song, pk=pk)
 
